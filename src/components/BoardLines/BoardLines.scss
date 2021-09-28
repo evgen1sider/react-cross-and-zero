@@ -1,0 +1,25 @@
+.board__linear {
+  position: absolute;
+
+  &--1 {
+    top: 80px;
+    left: -30px;
+  }
+
+  &--2 {
+    top: 180px;
+    left: -30px;
+  }
+
+  &--3 {
+    top: 195px;
+    left: -135px;
+    transform: rotate(90deg);
+  }
+
+  &--4 {
+    top: 195px;
+    left: -35px;
+    transform: rotate(90deg);
+  }
+}

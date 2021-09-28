@@ -1,27 +1,57 @@
 import React from 'react';
 import './App.scss';
+import { ChosePlayer } from './components/ChosePlayer';
+import { Game } from './components/Game';
 
-interface Props {
-  onClick: () => void;
-}
-
-export const Provider: React.FC<Props> = React.memo(
-  ({ onClick, children }) => (
-    <button
-      type="button"
-      onClick={onClick}
-    >
-      {children}
-    </button>
-  ),
-);
-
-export const App: React.FC = () => {
-  return (
-    <div className="starter">
-      <Provider onClick={() => ({})}>
-        <TodoList />
-      </Provider>
-    </div>
-  );
+type State = {
+  isStart: boolean;
+  firstPlayer: string;
+  secondPlayer: string;
 };
+
+export class App extends React.Component<{}, State> {
+  state = {
+    isStart: false,
+    firstPlayer: '',
+    secondPlayer: '',
+  };
+
+  handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+
+    // eslint-disable-next-line no-console
+    console.log('submit', event.currentTarget.id);
+  };
+
+  getNameOfPlayers = (values: string[]) => {
+    // eslint-disable-next-line no-console
+    console.log('App player:', values); // input value
+
+    this.setState({
+      firstPlayer: values[0],
+      secondPlayer: values[1],
+    });
+  };
+
+  render() {
+    const { isStart, firstPlayer, secondPlayer } = this.state;
+
+    // eslint-disable-next-line no-console
+    console.log(firstPlayer, secondPlayer);
+
+    return (
+      <div className="starter">
+        <h2> Cross and Zeros</h2>
+        {!isStart ? (
+          <ChosePlayer
+            firstPlayer={firstPlayer}
+            secondPlayer={secondPlayer}
+            onSubmit={this.handleSubmit}
+            getName={this.getNameOfPlayers}
+          />
+        ) : (null)}
+        <Game />
+      </div>
+    );
+  }
+}
