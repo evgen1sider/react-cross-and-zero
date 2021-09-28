@@ -1,14 +1,4 @@
-# React TypeScript Starter Pack
-
-To use this template click `Use this template`
-
-### Available Scripts
-
-`Deploy` - available to deploy your application to gh-pages
-
-`SCSS Preprocessor` - available to write your styles with modern style language
-
-# Project Title
+# React Crosses and Zero's Game
 
 Write here about your project in two-three sentences.
 this is crosses and zero's game making on react
