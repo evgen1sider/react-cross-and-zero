@@ -2,11 +2,11 @@
 
 Write here about your project in two-three sentences.
 this is crosses and zero's game making on react
-- [ADD DEMO LINK HERE]()
+- [DEMO LINK HERE](https://evgen1sider.github.io/react-cross-and-zero/)
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+Game where you can play
 
 ## Local development
 
