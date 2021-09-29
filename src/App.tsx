@@ -30,6 +30,7 @@ export class App extends React.Component<{}, State> {
     this.setState({
       firstPlayer: values[0],
       secondPlayer: values[1],
+      isStart: true,
     });
   };
 
@@ -41,11 +42,11 @@ export class App extends React.Component<{}, State> {
 
     return (
       <div className="starter">
-        <h2> Cross and Zeros</h2>
         {!isStart ? (
           <ChosePlayer
             firstPlayer={firstPlayer}
             secondPlayer={secondPlayer}
+            isStart={isStart}
             onSubmit={this.handleSubmit}
             getName={this.getNameOfPlayers}
           />
