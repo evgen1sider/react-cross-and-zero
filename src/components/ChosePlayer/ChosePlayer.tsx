@@ -4,15 +4,13 @@ import classNames from 'classnames';
 import './ChosePlayer.scss';
 
 type Props = {
-  firstPlayer: string;
-  secondPlayer: string;
   isStart: boolean;
   onSubmit: (event: React.FormEvent) => void;
   getName: (values: string[]) => void;
 };
 
 export const ChosePlayer: React.FC<Props> = (props) => {
-  const { firstPlayer, secondPlayer, isStart } = props;
+  const { isStart } = props;
   const [query1, setQuery1] = useState<string>('');
   const [query2, setQuery2] = useState<string>('');
   const domId: string[] = ['first', 'second'];
@@ -73,10 +71,6 @@ export const ChosePlayer: React.FC<Props> = (props) => {
           </div>
         </fieldset>
       </form>
-      <div>
-        <p>{firstPlayer}</p>
-        <p>{secondPlayer}</p>
-      </div>
     </div>
   );
 };

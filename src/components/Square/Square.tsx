@@ -1,4 +1,5 @@
 import React from 'react';
+import { Cross, Zero } from '../SquareImages';
 
 import './Square.scss';
 
@@ -9,6 +10,15 @@ type Props = {
 
 export const Square: React.FC<Props> = (props) => {
   const { value } = props;
+  let item;
+
+  if (value === 'X') {
+    item = <Cross show={value} />;
+  }
+
+  if (value === 'O') {
+    item = <Zero show={value} />;
+  }
 
   return (
     <button
@@ -16,7 +26,7 @@ export const Square: React.FC<Props> = (props) => {
       className="square"
       onClick={props.click}
     >
-      {value}
+      {item}
     </button>
   );
 };

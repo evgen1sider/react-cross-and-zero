@@ -28,7 +28,7 @@ const Linear: React.FC = () => (
   </svg>
 );
 
-export const BoardLines = () => {
+export const BoardLines:React.FC = () => {
   return (
     <>
       <div className="board__linear board__linear--1">
@@ -46,3 +46,20 @@ export const BoardLines = () => {
     </>
   );
 };
+
+export const RedLine: React.FC<{index: number}> = ({ index }) => (
+  <div
+    className={index !== 0 ? 'red-line' : `red-line--${index}`}
+  >
+    <svg width="380" height="24">
+      <line
+        x1="280"
+        y1="20"
+        x2="20"
+        y2="20"
+        stroke="red"
+        strokeWidth="9"
+      />
+    </svg>
+  </div>
+);

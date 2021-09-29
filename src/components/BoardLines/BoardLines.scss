@@ -23,3 +23,64 @@
     transform: rotate(90deg);
   }
 }
+
+.red-line {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+
+  &--1 {
+    visibility: visible;
+    opacity: 1;
+    top: 30px;
+  }
+
+  &--2 {
+    visibility: visible;
+    opacity: 1;
+    top: 130px;
+  }
+
+  &--3 {
+    visibility: visible;
+    opacity: 1;
+    top: 230px;
+  }
+
+  &--4 {
+    visibility: visible;
+    opacity: 1;
+    top: 175px;
+    left: -35px;
+    transform: rotate(90deg);
+  }
+  &--5 {
+    visibility: visible;
+    opacity: 1;
+    top: 175px;
+    left: -135px;
+    transform: rotate(90deg);
+  }
+  &--6 {
+    visibility: visible;
+    opacity: 1;
+    top: 175px;
+    left: 65px;
+    transform: rotate(90deg);
+  }
+  &--7 {
+    visibility: visible;
+    opacity: 1;
+    top: 155px;
+    left: -15px;
+    transform: rotate(45deg);
+  }
+
+  &--8 {
+    visibility: visible;
+    opacity: 1;
+    top: 165px;
+    left: -60px;
+    transform: rotate(135deg);
+  }
+}

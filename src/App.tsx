@@ -5,33 +5,53 @@ import { Game } from './components/Game';
 
 type State = {
   isStart: boolean;
-  firstPlayer: string;
-  secondPlayer: string;
+  firstPlayer: Player;
+  secondPlayer: Player;
 };
 
-export class App extends React.Component<{}, State> {
-  state = {
+export class App extends React.PureComponent<{}, State> {
+  state: State = {
     isStart: false,
-    firstPlayer: '',
-    secondPlayer: '',
+    firstPlayer: {
+      name: 'player1',
+      score: 0,
+    },
+    secondPlayer: {
+      name: 'player2',
+      score: 0,
+    },
   };
 
   handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-
-    // eslint-disable-next-line no-console
-    console.log('submit', event.currentTarget.id);
   };
 
   getNameOfPlayers = (values: string[]) => {
-    // eslint-disable-next-line no-console
-    console.log('App player:', values); // input value
-
     this.setState({
-      firstPlayer: values[0],
-      secondPlayer: values[1],
+      firstPlayer: {
+        name: values[0],
+        score: 0,
+      },
+      secondPlayer: {
+        name: values[1],
+        score: 0,
+      },
       isStart: true,
     });
+  };
+
+  getScores = (x: number, o: number) => {
+    this.setState((curentState) => ({
+      firstPlayer: {
+        name: curentState.firstPlayer.name,
+        score: x,
+      },
+      secondPlayer: {
+        name: curentState.secondPlayer.name,
+        score: o,
+      },
+      isStart: curentState.isStart,
+    }));
   };
 
   render() {
@@ -44,14 +64,16 @@ export class App extends React.Component<{}, State> {
       <div className="starter">
         {!isStart ? (
           <ChosePlayer
-            firstPlayer={firstPlayer}
-            secondPlayer={secondPlayer}
             isStart={isStart}
             onSubmit={this.handleSubmit}
             getName={this.getNameOfPlayers}
           />
         ) : (null)}
-        <Game />
+        <Game
+          firstPlayer={firstPlayer}
+          secondPlayer={secondPlayer}
+          addScores={this.getScores}
+        />
       </div>
     );
   }

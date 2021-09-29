@@ -1,8 +1,9 @@
 .square {
+  position: relative;
   height: 100px;
   width: 100px;
-  background-color: white;
-  border: 1px solid black;
+  background-color: rgb(83, 42, 158);
+  border: 1px solid #403d5f;
   cursor: pointer;
   font-size: 60px;
   display: flex;
@@ -11,6 +12,6 @@
 }
 
 .square:hover {
-  background-color: rgb(136, 132, 132);
+  background-color: rgb(117, 92, 165);
   transition: 500ms all ease;
 }
