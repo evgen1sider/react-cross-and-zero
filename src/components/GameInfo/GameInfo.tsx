@@ -3,7 +3,7 @@ import React from 'react';
 import './GameInfo.scss';
 
 type Props = {
-  winner: string | null;
+  winner: [string, number] | null;
   isDraw: string;
   firstPlayer: Player;
   secondPlayer: Player;
@@ -11,10 +11,8 @@ type Props = {
 
 export const GameInfo: React.FC<Props> = (props) => {
   const {
-    firstPlayer, secondPlayer, isDraw,
+    firstPlayer, secondPlayer, isDraw, winner,
   } = props;
-
-  const winLastRound = (isDraw === 'Draw') ? isDraw : `Win in last round: ${isDraw}`;
 
   return (
     <div className="game-info">
@@ -27,7 +25,9 @@ export const GameInfo: React.FC<Props> = (props) => {
         <span>{`${secondPlayer.name}: `}</span>
         <span>{secondPlayer.score}</span>
       </p>
-      <p>{isDraw && winLastRound}</p>
+      {winner && `${isDraw} Win!!!`}
+      {isDraw.length > 0
+        && <p>{(isDraw === 'Draw') ? `${isDraw} in last round` : `${isDraw} win in last round`}</p>}
     </div>
   );
 };

@@ -6,7 +6,7 @@ import { BoardLines, RedLine } from '../BoardLines';
 type Props = {
   squares: string[];
   click: (index: number) => void;
-  index: number|null
+  index: [string, number] | null;
 };
 
 export const Board: React.FC<Props> = (props) => {
@@ -19,8 +19,7 @@ export const Board: React.FC<Props> = (props) => {
         <Square key={i} value={square} click={() => click(i)} />
       ))}
       <BoardLines />
-
-      {index && <RedLine index={index} />}
+      <RedLine index={index ? index[1] : index} />
     </div>
   );
 };

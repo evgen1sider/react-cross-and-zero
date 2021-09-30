@@ -45,20 +45,18 @@ export const Game: React.FC<Props> = (props) => {
     if (winner) {
       if (winner[0] === 'X') {
         setPlayerOneScore(x += 1);
-        restart();
         setIsDraw(firstPlayer.name);
+        restart();
       }
 
       if (winner[0] === 'O') {
         setPlayerTwoScore(o += 1);
-        restart();
         setIsDraw(secondPlayer.name);
+        restart();
       }
     }
 
     if (winner || checkBoard(boardCopy)) {
-      // eslint-disable-next-line no-console
-      console.log('winer', winner);
       restart();
       if (!winner) {
         setIsDraw('Draw');
@@ -67,7 +65,9 @@ export const Game: React.FC<Props> = (props) => {
       return;
     }
 
-    boardCopy[index] = xIsNext ? 'X' : 'O';
+    if (!boardCopy[index]) {
+      boardCopy[index] = xIsNext ? 'X' : 'O';
+    }
 
     setBoard(boardCopy);
     setXIsNext(!xIsNext);
@@ -75,10 +75,11 @@ export const Game: React.FC<Props> = (props) => {
 
   return (
     <div className="game">
-      <Board squares={board} index={winner ? winner[1] : winner} click={handleClick} />
+      <Board squares={board} index={winner} click={handleClick} />
+
       <GameInfo
         isDraw={hosWin}
-        winner={winner ? winner[0] : winner}
+        winner={winner}
         firstPlayer={firstPlayer}
         secondPlayer={secondPlayer}
       />

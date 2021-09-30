@@ -47,11 +47,11 @@ export const BoardLines:React.FC = () => {
   );
 };
 
-export const RedLine: React.FC<{index: number}> = ({ index }) => (
+export const RedLine: React.FC<{index: number | null}> = ({ index }) => (
   <div
-    className={index !== 0 ? 'red-line' : `red-line--${index}`}
+    className={index === null ? 'red-line' : `red-line--${index + 1}`}
   >
-    <svg width="380" height="24">
+    <svg width="280" height="24">
       <line
         x1="280"
         y1="20"
