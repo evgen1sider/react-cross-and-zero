@@ -7,23 +7,23 @@ const Linear: React.FC = () => (
       r="4"
       cx="340"
       cy="20"
-      stroke="violet"
-      fill="violet"
+      stroke="#75007c"
+      fill="#75007c"
     />
     <line
       x1="340"
       y1="20"
       x2="20"
       y2="20"
-      stroke="violet"
+      stroke="#75007c"
       strokeWidth="9"
     />
     <circle
       r="4"
       cx="20"
       cy="20"
-      stroke="violet"
-      fill="violet"
+      stroke="#75007c"
+      fill="#75007c"
     />
   </svg>
 );
@@ -51,13 +51,13 @@ export const RedLine: React.FC<{index: number | null}> = ({ index }) => (
   <div
     className={index === null ? 'red-line' : `red-line--${index + 1}`}
   >
-    <svg width="280" height="24">
+    <svg width="320" height="24">
       <line
-        x1="280"
+        x1="300"
         y1="20"
         x2="20"
         y2="20"
-        stroke="red"
+        stroke="#da472d"
         strokeWidth="9"
       />
     </svg>

@@ -33,21 +33,24 @@
     position: absolute;
     visibility: visible;
     opacity: 1;
-    top: 30px;
+    top: 25px;
+    left: -10px;
   }
 
   &--2 {
     position: absolute;
     visibility: visible;
     opacity: 1;
-    top: 125px;
+    top: 130px;
+    left: -10px;
   }
 
   &--3 {
     position: absolute;
     visibility: visible;
-    opacity: 2;
-    top: 225px;
+    opacity: 1;
+    top: 230px;
+    left: -10px;
     
   }
 
@@ -55,24 +58,24 @@
     position: absolute;
     visibility: visible;
     opacity: 1;
-    top: 130px;
-    left: -90px;
+    top: 135px;
+    left: -105px;
     transform: rotate(90deg);
   }
   &--5 {
     position: absolute;
     visibility: visible;
     opacity: 1;
-    top: 130px;
-    left: 15px;
+    top: 135px;
+    left: -10px;
     transform: rotate(90deg);
   }
   &--6 {
     position: absolute;
     visibility: visible;
     opacity: 1;
-    top: 130px;
-    left: 110px;
+    top: 135px;
+    left: 90px;
     transform: rotate(90deg);
   }
   &--7 {
@@ -80,7 +83,7 @@
     visibility: visible;
     opacity: 1;
     top: 130px;
-    left: 10px;
+    left: -5px;
     transform: rotate(45deg);
   }
 
@@ -89,7 +92,7 @@
     visibility: visible;
     opacity: 1;
     top: 160px;
-    left: 35px;
+    left: 15px;
     transform: translate(400px);
     transform: rotate(135deg) translateY(100%);
   }

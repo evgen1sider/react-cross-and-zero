@@ -16,7 +16,7 @@ export const Game: React.FC<Props> = (props) => {
   const [xIsNext, setXIsNext] = useState(true);
   const [playerOneScore, setPlayerOneScore] = useState<number>(firstPlayer.score);
   const [playerTwoScore, setPlayerTwoScore] = useState<number>(secondPlayer.score);
-  const [hosWin, setIsDraw] = useState<string>('');
+  const [whoIsWin, setWhoIsWin] = useState<string>('');
   const winner: [string, number] | null = calculateWinner(board);
   let x: number = playerOneScore;
   let o: number = playerTwoScore;
@@ -45,13 +45,13 @@ export const Game: React.FC<Props> = (props) => {
     if (winner) {
       if (winner[0] === 'X') {
         setPlayerOneScore(x += 1);
-        setIsDraw(firstPlayer.name);
+        setWhoIsWin(firstPlayer.name);
         restart();
       }
 
       if (winner[0] === 'O') {
         setPlayerTwoScore(o += 1);
-        setIsDraw(secondPlayer.name);
+        setWhoIsWin(secondPlayer.name);
         restart();
       }
     }
@@ -59,7 +59,7 @@ export const Game: React.FC<Props> = (props) => {
     if (winner || checkBoard(boardCopy)) {
       restart();
       if (!winner) {
-        setIsDraw('Draw');
+        setWhoIsWin('Draw');
       }
 
       return;
@@ -79,7 +79,7 @@ export const Game: React.FC<Props> = (props) => {
         <Board squares={board} index={winner} click={handleClick} />
 
         <GameInfo
-          isDraw={hosWin}
+          whoWin={whoIsWin}
           winner={winner}
           firstPlayer={firstPlayer}
           secondPlayer={secondPlayer}

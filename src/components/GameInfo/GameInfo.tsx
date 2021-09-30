@@ -4,14 +4,14 @@ import './GameInfo.scss';
 
 type Props = {
   winner: [string, number] | null;
-  isDraw: string;
+  whoWin: string;
   firstPlayer: Player;
   secondPlayer: Player;
 };
 
 export const GameInfo: React.FC<Props> = (props) => {
   const {
-    firstPlayer, secondPlayer, isDraw, winner,
+    firstPlayer, secondPlayer, whoWin, winner,
   } = props;
 
   return (
@@ -26,10 +26,10 @@ export const GameInfo: React.FC<Props> = (props) => {
         <span>{secondPlayer.score}</span>
       </p>
       <p>
-        {winner && `${winner[0]} Win!!! in this round`}
+        {winner && `${winner[0] === 'X' ? firstPlayer.name : secondPlayer.name} Win!!! in this round`}
       </p>
-      {isDraw.length > 0
-        && <p>{(isDraw === 'Draw') ? `${isDraw} in last round` : `${isDraw} win in last round`}</p>}
+      {whoWin.length > 0
+        && <p>{(whoWin === 'Draw') ? `${whoWin} in last round` : `${whoWin} win in last round`}</p>}
     </div>
   );
 };
