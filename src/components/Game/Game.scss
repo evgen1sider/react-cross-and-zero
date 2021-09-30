@@ -6,19 +6,11 @@
   justify-content: center;
   align-items: center;
 
-  &__start-button {
-    width: 200px;
-    height: 48px;
-    margin-bottom: 24px;
-    cursor: pointer;
-    color: #fff;
-    background-color: blue;
-    border: 1px solid white;
-
-    &:hover {
-      background-color: white;
-      color: blue;
-      transition: 500ms all ease;
-    }
+  &__board {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
   }
+
 }

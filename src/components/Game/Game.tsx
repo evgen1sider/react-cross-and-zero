@@ -75,14 +75,16 @@ export const Game: React.FC<Props> = (props) => {
 
   return (
     <div className="game">
-      <Board squares={board} index={winner} click={handleClick} />
+      <div className="game__board">
+        <Board squares={board} index={winner} click={handleClick} />
 
-      <GameInfo
-        isDraw={hosWin}
-        winner={winner}
-        firstPlayer={firstPlayer}
-        secondPlayer={secondPlayer}
-      />
+        <GameInfo
+          isDraw={hosWin}
+          winner={winner}
+          firstPlayer={firstPlayer}
+          secondPlayer={secondPlayer}
+        />
+      </div>
     </div>
   );
 };

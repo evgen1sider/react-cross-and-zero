@@ -25,7 +25,7 @@ export const GameInfo: React.FC<Props> = (props) => {
         <span>{`${secondPlayer.name}: `}</span>
         <span>{secondPlayer.score}</span>
       </p>
-      {winner && `${isDraw} Win!!!`}
+      {winner && `${winner[0]} Win!!! in this round`}
       {isDraw.length > 0
         && <p>{(isDraw === 'Draw') ? `${isDraw} in last round` : `${isDraw} win in last round`}</p>}
     </div>
