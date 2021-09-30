@@ -1,5 +1,5 @@
 # React Crosses and Zero's Game
-# React Crosses and Zero's Game
+
 this is crosses and zero's game making on react
 - [DEMO LINK HERE](https://evgen1sider.github.io/react-cross-and-zero/)
 
