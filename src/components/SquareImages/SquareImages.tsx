@@ -22,7 +22,7 @@ export const Zero: React.FC<Props> = ({ show }) => (
 
 export const Cross: React.FC<Props> = ({ show }) => (
   <div className={show === 'O' ? 'cross' : 'cross cross--show'}>
-    <svg width="200" height="100">
+    <svg width="100" height="100">
       <line
         x1="10"
         y1="10"
