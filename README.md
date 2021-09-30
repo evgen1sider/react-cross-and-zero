@@ -8,6 +8,7 @@ this is crosses and zero's game making on react
 Game where you can play in cross and zero.
 * when opened page you can chose the players name.
 * after click begin the game was start.
+* when one of player win click on board to clear board
 
 ## Local development
 
