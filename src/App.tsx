@@ -63,9 +63,6 @@ export class App extends React.PureComponent<{}, State> {
   render() {
     const { isStart, firstPlayer, secondPlayer } = this.state;
 
-    // eslint-disable-next-line no-console
-    console.log(firstPlayer, secondPlayer);
-
     return (
       <div className="starter">
         {!isStart ? (
