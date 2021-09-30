@@ -1,0 +1,69 @@
+.chose-player {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 800ms ease;
+  z-index: 99;
+  opacity: 1;
+  visibility: h;
+
+  &--hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__form {
+    background-color: white;
+    width: 380px;
+    height: 260px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+
+  &__fieldset {
+    padding: 20px;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__input {
+    border: black 1px solid;
+    border-radius: 4px;
+    padding-left: 10px;
+  }
+
+  &__submit{
+    margin-bottom: 20px;
+    width: 120px;
+    height: 24px;
+    border: green 1px solid;
+    border-radius: 4px;
+    background-color: green;
+    color: white;
+    transition: all 500ms ease;
+
+    &:hover {
+      background-color: white;
+      color: green;
+      cursor: pointer;
+    }
+  }
+
+  &__submit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

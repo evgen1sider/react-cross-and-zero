@@ -1,0 +1,96 @@
+.board__linear {
+  position: absolute;
+
+  &--1 {
+    top: 80px;
+    left: -30px;
+  }
+
+  &--2 {
+    top: 180px;
+    left: -30px;
+  }
+
+  &--3 {
+    top: 195px;
+    left: -135px;
+    transform: rotate(90deg);
+  }
+
+  &--4 {
+    top: 195px;
+    left: -35px;
+    transform: rotate(90deg);
+  }
+}
+
+.red-line {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+
+  &--1 {
+    position: absolute;
+    visibility: visible;
+    opacity: 1;
+    top: 30px;
+  }
+
+  &--2 {
+    position: absolute;
+    visibility: visible;
+    opacity: 1;
+    top: 125px;
+  }
+
+  &--3 {
+    position: absolute;
+    visibility: visible;
+    opacity: 2;
+    top: 225px;
+    
+  }
+
+  &--4 {
+    position: absolute;
+    visibility: visible;
+    opacity: 1;
+    top: 130px;
+    left: -90px;
+    transform: rotate(90deg);
+  }
+  &--5 {
+    position: absolute;
+    visibility: visible;
+    opacity: 1;
+    top: 130px;
+    left: 15px;
+    transform: rotate(90deg);
+  }
+  &--6 {
+    position: absolute;
+    visibility: visible;
+    opacity: 1;
+    top: 130px;
+    left: 110px;
+    transform: rotate(90deg);
+  }
+  &--7 {
+    position: absolute;
+    visibility: visible;
+    opacity: 1;
+    top: 130px;
+    left: 10px;
+    transform: rotate(45deg);
+  }
+
+  &--8 {
+    position: absolute;
+    visibility: visible;
+    opacity: 1;
+    top: 160px;
+    left: 35px;
+    transform: translate(400px);
+    transform: rotate(135deg) translateY(100%);
+  }
+}

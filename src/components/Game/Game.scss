@@ -1,0 +1,16 @@
+.game {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #403d5f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__board {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+}

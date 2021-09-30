@@ -1,0 +1,17 @@
+.square {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(83, 42, 158);
+  border: 1px solid #403d5f;
+  cursor: pointer;
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square:hover {
+  background-color: rgb(117, 92, 165);
+  transition: 500ms all ease;
+}
