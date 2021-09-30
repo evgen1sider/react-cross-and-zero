@@ -5,8 +5,8 @@ this is crosses and zero's game making on react
 ## Description
 
 Game where you can play in cross and zero.
-when opened page you can chose the players name
-after click begin to start game.
+* when opened page you can chose the players name.
+* after click begin the game was start.
 
 ## Local development
 
@@ -17,4 +17,4 @@ after click begin to start game.
 ## Troubleshooting
 
 Any advise for common problems or issues.
-For any contributing or problem solving you could find me [here]() and [here]()
+For any contributing or problem solving you could find me [https://github.com/evgen1sider]() and [https://www.linkedin.com/in/yevhenii-sviderskyi-917771139/]()

@@ -27,17 +27,23 @@ export class App extends React.PureComponent<{}, State> {
   };
 
   getNameOfPlayers = (values: string[]) => {
-    this.setState({
-      firstPlayer: {
-        name: values[0],
-        score: 0,
-      },
-      secondPlayer: {
-        name: values[1],
-        score: 0,
-      },
-      isStart: true,
-    });
+    if (values[0].length > 0) {
+      this.setState({
+        firstPlayer: {
+          name: values[0],
+          score: 0,
+        },
+      });
+    }
+
+    if (values[1].length > 0) {
+      this.setState({
+        secondPlayer: {
+          name: values[1],
+          score: 0,
+        },
+      });
+    }
   };
 
   getScores = (x: number, o: number) => {
